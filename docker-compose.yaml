@@ -19,6 +19,11 @@ services:
     image: cortezaproject/corteza-server-corredor:2023.9.5
     restart: unless-stopped
     env_file: .env 
+    environment:
+      - MYSQL_DATABASE=dbname
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbpass
+      - MYSQL_RANDOM_ROOT_PASSWORD=random     
 
   db:
     image: mariadb           #percona:8.0

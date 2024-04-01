@@ -1,7 +1,7 @@
 services:
 
   server:
-    image: cortezaproject/corteza-server:2023.9
+    image: cortezaproject/corteza-server:2023.9.5
     restart: unless-stopped
     env_file: .env 
     depends_on: 
@@ -11,7 +11,7 @@ services:
       - "8200:80"
 
   corredor:
-    image: cortezaproject/corteza-server-corredor:2023.9
+    image: cortezaproject/corteza-server-corredor:2023.9.5
     restart: unless-stopped
     env_file: .env 
 
